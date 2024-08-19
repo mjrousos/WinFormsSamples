@@ -24,7 +24,54 @@ namespace SimpleSample
             LoadSettings();
             PopulateDataGrid();
             StyleDataGrid();
+            CreateMenu();
         }
+
+        private void CreateMenu()
+        {
+            var menu = new MainMenu();
+            var clearSettingsMenumitem = new MenuItem("Clear settings", new EventHandler(ClearSettings))
+            {
+                Text = "Clear settings"
+            };
+
+            var rotatePicMenuItem = new MenuItem("Rotate picture", new EventHandler(RotatePicutre))
+            {
+                Text = "Rotate picture"
+            };
+
+
+            var exitMenuItem = new MenuItem("Exit", new EventHandler(Exit))
+            {
+                Text = "Exit"
+            };
+            
+            menu.MenuItems.Add(clearSettingsMenumitem);
+            menu.MenuItems.Add(rotatePicMenuItem);
+            menu.MenuItems.Add(exitMenuItem);
+
+            Menu = menu;
+        }
+
+        private void RotatePicutre(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                pictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pictureBox1.Refresh();
+            }
+        }
+
+        private void ClearSettings(object sender, EventArgs e)
+        {
+            imagePath = null;
+            pictureBox1.Image = null;
+            txtUserName.Text = string.Empty;
+
+            SaveSettings();
+        }
+
+        private void Exit(object sender, EventArgs e) => Application.Exit();
 
         private void toolBar_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
         {
