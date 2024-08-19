@@ -33,14 +33,19 @@ namespace SimpleSample
         private void InitializeComponent()
         {
             this.btnExit = new System.Windows.Forms.Button();
+            // TODO ToolBar is no longer supported. Use ToolStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             this.toolBar = new System.Windows.Forms.ToolBar();
+            // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             this.tbtnCat = new System.Windows.Forms.ToolBarButton();
+            // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             this.tbtnDog = new System.Windows.Forms.ToolBarButton();
+            // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             this.tbtnExit = new System.Windows.Forms.ToolBarButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUpdateUserName = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
+            // TODO DataGrid is no longer supported. Use DataGridView instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             this.dataGrid = new System.Windows.Forms.DataGrid();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -58,7 +63,8 @@ namespace SimpleSample
             // 
             // toolBar
             // 
-            this.toolBar.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
+            // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+                                                this.toolBar.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
             this.tbtnCat,
             this.tbtnDog,
             this.tbtnExit});
@@ -153,14 +159,19 @@ namespace SimpleSample
         #endregion
 
         private System.Windows.Forms.Button btnExit;
+        // TODO ToolBar is no longer supported. Use ToolStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
         private System.Windows.Forms.ToolBar toolBar;
+        // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
         private System.Windows.Forms.ToolBarButton tbtnCat;
+        // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
         private System.Windows.Forms.ToolBarButton tbtnDog;
+        // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
         private System.Windows.Forms.ToolBarButton tbtnExit;
         private PictureBox pictureBox1;
         private Button btnUpdateUserName;
         private Label label1;
         private TextBox txtUserName;
+        // TODO DataGrid is no longer supported. Use DataGridView instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
         private DataGrid dataGrid;
         private string imagePath;
     }

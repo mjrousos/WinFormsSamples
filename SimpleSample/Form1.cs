@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Runtime.Hosting;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,18 +28,22 @@ namespace SimpleSample
 
         private void CreateMenu()
         {
+            // TODO MainMenu is no longer supported. Use MenuStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             var menu = new MainMenu();
+            // TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             var clearSettingsMenumitem = new MenuItem("Clear settings", new EventHandler(ClearSettings))
             {
                 Text = "Clear settings"
             };
 
+            // TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             var rotatePicMenuItem = new MenuItem("Rotate picture", new EventHandler(RotatePicutre))
             {
                 Text = "Rotate picture"
             };
 
 
+            // TODO MenuItem is no longer supported. Use ToolStripMenuItem instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             var exitMenuItem = new MenuItem("Exit", new EventHandler(Exit))
             {
                 Text = "Exit"
@@ -50,6 +53,7 @@ namespace SimpleSample
             menu.MenuItems.Add(rotatePicMenuItem);
             menu.MenuItems.Add(exitMenuItem);
 
+            // TODO Menu is no longer supported. Use ToolStripDropDown instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             Menu = menu;
         }
 
@@ -73,7 +77,8 @@ namespace SimpleSample
 
         private void Exit(object sender, EventArgs e) => Application.Exit();
 
-        private void toolBar_ButtonClick(object sender, ToolBarButtonClickEventArgs e)
+        private void toolBar_ButtonClick(object sender, // TODO ToolBarButton is no longer supported. Use ToolStripButton instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
+ToolBarButtonClickEventArgs e)
         {
             string imageName = null;
             switch (e.Button.Name)
@@ -183,16 +188,19 @@ namespace SimpleSample
 
         private void StyleDataGrid()
         {
+            // TODO DataGrid is no longer supported. Use DataGridView instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             var tableStyle = new DataGridTableStyle();
             tableStyle.MappingName = "Environment";
             tableStyle.AlternatingBackColor = Color.Yellow;
 
+            // TODO DataGrid is no longer supported. Use DataGridView instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             var nameColumnStyle = new DataGridTextBoxColumn();
             nameColumnStyle.MappingName = "Name";
             nameColumnStyle.HeaderText = "Name";
             nameColumnStyle.Width = 90;
             tableStyle.GridColumnStyles.Add(nameColumnStyle);
 
+            // TODO DataGrid is no longer supported. Use DataGridView instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/winforms#removed-controls
             var valueColumnStyle = new DataGridTextBoxColumn();
             valueColumnStyle.MappingName = "Value";
             valueColumnStyle.HeaderText = "Value";
