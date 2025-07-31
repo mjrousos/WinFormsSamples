@@ -42,15 +42,17 @@ namespace SimpleSample
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.dataGrid = new System.Windows.Forms.DataGrid();
+            this.tbtnOcelot = new System.Windows.Forms.ToolBarButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(713, 415);
+            this.btnExit.Location = new System.Drawing.Point(802, 519);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(84, 29);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Close";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -61,12 +63,14 @@ namespace SimpleSample
             this.toolBar.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
             this.tbtnCat,
             this.tbtnDog,
+            this.tbtnOcelot,
             this.tbtnExit});
             this.toolBar.DropDownArrows = true;
             this.toolBar.Location = new System.Drawing.Point(0, 0);
+            this.toolBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.toolBar.Name = "toolBar";
             this.toolBar.ShowToolTips = true;
-            this.toolBar.Size = new System.Drawing.Size(800, 45);
+            this.toolBar.Size = new System.Drawing.Size(900, 49);
             this.toolBar.TabIndex = 1;
             this.toolBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.toolBar_ButtonClick);
             // 
@@ -87,17 +91,19 @@ namespace SimpleSample
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 64);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(375, 375);
+            this.pictureBox1.Size = new System.Drawing.Size(422, 469);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // btnUpdateUserName
             // 
-            this.btnUpdateUserName.Location = new System.Drawing.Point(713, 98);
+            this.btnUpdateUserName.Location = new System.Drawing.Point(802, 122);
+            this.btnUpdateUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdateUserName.Name = "btnUpdateUserName";
-            this.btnUpdateUserName.Size = new System.Drawing.Size(75, 28);
+            this.btnUpdateUserName.Size = new System.Drawing.Size(84, 35);
             this.btnUpdateUserName.TabIndex = 3;
             this.btnUpdateUserName.Text = "Update";
             this.btnUpdateUserName.UseVisualStyleBackColor = true;
@@ -106,17 +112,18 @@ namespace SimpleSample
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(715, 51);
+            this.label1.Location = new System.Drawing.Point(804, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "User name";
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(713, 70);
+            this.txtUserName.Location = new System.Drawing.Point(802, 88);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(75, 22);
+            this.txtUserName.Size = new System.Drawing.Size(84, 26);
             this.txtUserName.TabIndex = 5;
             // 
             // dataGrid
@@ -124,16 +131,22 @@ namespace SimpleSample
             this.dataGrid.CaptionText = "DataGrid Example";
             this.dataGrid.DataMember = "";
             this.dataGrid.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid.Location = new System.Drawing.Point(422, 173);
+            this.dataGrid.Location = new System.Drawing.Point(475, 216);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(368, 218);
+            this.dataGrid.Size = new System.Drawing.Size(414, 272);
             this.dataGrid.TabIndex = 6;
+            // 
+            // tbtnOcelot
+            // 
+            this.tbtnOcelot.Name = "tbtnOcelot";
+            this.tbtnOcelot.Text = "Ocelot";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdateUserName);
@@ -141,6 +154,7 @@ namespace SimpleSample
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.toolBar);
             this.Controls.Add(this.dataGrid);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -163,5 +177,6 @@ namespace SimpleSample
         private TextBox txtUserName;
         private DataGrid dataGrid;
         private string imagePath;
+        private ToolBarButton tbtnOcelot;
     }
 }

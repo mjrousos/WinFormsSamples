@@ -84,6 +84,9 @@ namespace SimpleSample
                 case "tbtnDog":
                     imageName = "dog.jpg";
                     break;
+                case "tbtnOcelot":
+                    imageName = "ocelot.png";
+                    break;
                 case "tbtnExit":
                     Application.Exit();
                     break;
